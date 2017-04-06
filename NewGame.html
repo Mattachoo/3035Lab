@@ -1,0 +1,87 @@
+	
+
+	<html>
+<head>
+Imlpimented in Google Chrome
+<style>
+table {
+border-collapse: collapse;
+}
+table, td, th {
+padding: 1px;
+min-width: 50px;
+height: 50px;
+vertical-align: center;
+word-wrap: break:word;
+max-width: 60px;
+left: 50%;
+}
+td{
+align: right;
+}
+#downright {
+ 
+  -webkit-transform: rotate(45deg);
+
+}
+#downleft{
+ 
+  -webkit-transform: rotate(-45deg);
+
+}
+#upright{
+ 
+  -webkit-transform: rotate(-45deg);
+
+}
+#upleft{
+ 
+  -webkit-transform: rotate(45deg);
+
+}
+button{
+border: 2px solid;
+    border-radius: 25px;
+	}
+#myCanvas { background-color: rgba(255, 255, 255, 0.5);
+ border-radius: 25px; }
+
+table {
+    border-radius: 25px;
+background-color: rgba(255, 255, 255, 0.5);}
+#box{
+width:20%;
+	    border-radius: 25px;
+background-color: rgba(255, 255, 255, 0.5);
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src = "NewGame.js"> </script>
+</head>
+<body id = "main" background = "handpainted_wall2.jpg">
+<div align = "center"><canvas    background= "lightblue" id="myCanvas" width="775" height="400" style="border:1px solid #d3d3d3;"></canvas><div>
+<div id = "box"></div>
+<div id = "box"></div>
+<script>
+$(document).ready(populateGrid());
+$(document).ready(callGrid());
+</script>
+
+<div id = "myTable" align= "center"></div>
+
+</br>
+<table background = "#FFFFFF"align = "center">
+<tr align = "center">
+<td>HP: <div id = "hp">5</div></td><td></td><td></td>
+</tr>
+<tr align = "center">
+<td><button class = "w3-button" id = "upleft" onClick ="$(document).ready(movement(7))"><</button></td><td><button id = "up" onClick ="$(document).ready(movement(8))">^</button></td><td id = "upright" onClick = "$(document).ready(movement(9))"><button>></button></td>
+</tr>
+<tr align = "center">
+<td><button id = "downleft" onClick ="$(document).ready(movement(1))"><</button></td><td><button onClick ="$(document).ready(movement(2))" id = "down">v</button></td><td><button id = "downright" onClick ="$(document).ready(movement(3))">></button></td>
+</tr>
+<tr><td colspan = "3">Score:<div id = "score"></div></td></tr>
+
+</table>
+</body>
+</html>
